@@ -1,0 +1,255 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="orderMasterPage.master.cs" Inherits="order" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    
+    <head runat="server">
+ <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+   
+
+
+
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content=""/>
+    <meta name="author" content=""/>
+
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css" />
+	<link href="css/nivo-lightbox.css" rel="stylesheet" />
+	<link href="css/nivo-lightbox-theme/default/default.css" rel="stylesheet" type="text/css" />
+	<link href="css/animate.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet"/>
+	<link href="css/default.css" rel="stylesheet"/>
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/jquery-3.1.0.js"></script>
+
+
+</head>
+   
+               
+
+
+    <body data-spy="scroll">
+       <form id="form1" runat="server">
+    <div class="container">
+        
+        <ul id="gn-menu" class="gn-menu-main" style="height:75px">
+            <li class="gn-trigger">
+
+                <a class="gn-icon gn-icon-menu"><span>Menu</span></a>
+                <nav class="gn-menu-wrapper">
+                    <div class="gn-scroller">
+                        <ul class="gn-menu">
+                            <li class="gn-search-item">
+<%--                                <input placeholder="Search" type="search" class="gn-search"/>--%>
+                                <a href="home.aspx"><span  class="glyphicon glyphicon-home" style="margin-left:10px">&nbsp;&nbsp;HOME</span></a>
+                            </li>
+                            <li>
+                                <a href="AboutUs.aspx"><span class="glyphicon glyphicon-th-list"style="margin-left:10px">&nbsp;&nbsp;ABOUT US</span></a>
+                            </li>
+                            <li><a href="category.aspx"><span class="glyphicon glyphicon-plus"style="margin-left:10px">&nbsp;&nbsp;CATEGORY</span></a></li>
+                            <li><a href="ContactUs.aspx"><span class="glyphicon glyphicon-map-marker"style="margin-left:10px">&nbsp;&nbsp;CONTACT US</span></a></li>
+                           <li><a href="login.aspx"><span class="glyphicon glyphicon-pencil"style="margin-left:10px">&nbsp;&nbsp;LOGIN</span></a></li>     
+                            <li><a href="Registration.aspx.aspx"><span class="glyphicon glyphicon-paperclip"style="margin-left:10px">&nbsp;&nbsp;REGISTER</span></a></li>
+                            </ul>
+                    </div>
+                     </nav>
+            </li>
+            <li>              <a href="home.aspx" style="font-family:Comic Sans MS;float:left;color:#ff6600"><h3>HANDICRAFT'S</h3>
+                
+                <h4 style="font-family:Lucida Calligraphy;color:#ff8533;font-size:x-small;margin-left:10px"> WORLD</h4></a>
+               
+
+                
+            </li>
+              <li>
+               
+            </li>
+            <li><a href="viewCart.aspx">
+                <img src="images/buttons/shopping_cart.png" /></a></li>
+            <%-- <li><b><i><asp:Label ID="lbluser" runat="server">   </asp:Label></i></b></li>--%>
+           <li> <a href="#">
+                         <asp:Button ID="btnLogout" runat="server" Text="Login" BorderStyle="None" BackColor="White" OnClick="btnLogout_Click" />
+              
+                </a>
+                     </li>
+            <li><a href="display_order.aspx">View Orders</a></li>
+             <%-- <li><b><i><asp:Label ID="Label1" runat="server">   </asp:Label></i></b></li>--%>
+            <li><b><i><asp:Label ID="lbluser" runat="server">   </asp:Label></i></b></li>
+           <%-- <li>
+                <a href="login.aspx">
+                    <asp:HyperLink ID="btnLogout" runat="server">Login</asp:HyperLink>
+                    <%--<img src="images/buttons/logout.png" />--%>
+                <%--</a>
+            </li>--%>
+            <li>
+
+                <asp:Label ID="masterlbl" runat="server" Text=""></asp:Label></li>
+            
+           <li>    
+              
+                <ul class="company-social">
+                     <%--<a id="btnLogout" href="login.aspx" style="background-color:white;color:black;margin-right:10px;font:bold;font-family:Sitka Small">
+                        LOGIN</a>
+                   --%>
+                                             <li><a href="adminSite/AdminLogin.aspx">
+                        <img src="images/logo/admin.png" /></a> </li>
+                   
+                    <li class="social-facebook"><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                    <li class="social-twitter"><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                    <li class="social-dribble"><a href="#" target="_blank"><i class="fa fa-dribbble"></i></a></li>
+                    <li class="social-google"><a href="#" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+                    
+                         <%--<a>
+                         <img src="images/buttons/shopping_cart.png" />
+                        </a>--%>
+                        <%-- <div style="margin-top:50px">
+                         <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="images/buttons/shopping_cart.png" /></div>
+                     </li>--%>
+                </ul>
+                
+            </li>
+           
+        </ul>
+    </div>
+    
+   
+    <div>
+
+
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+       
+
+        </div>
+        <script src="bootstrap/js/bootstrap.min.js"></script>
+     <!-- Core JavaScript Files -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/classie.js"></script>
+    <script src="js/gnmenu.js"></script>
+    <script src="js/jquery.scrollTo.js"></script>
+    <script src="js/nivo-lightbox.min.js"></script>
+    <script src="js/stellar.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="js/custom.js"></script>
+
+       <footer class="page-footer center-on-small-only" style="margin-top:80px">
+
+    <!--Footer Links-->
+    <div class="container-fluid">
+        <div class="row">
+
+       
+            
+
+            <!--Second column-->
+            <div class="col-md-3 offset-md-1" style="float:left">
+                <h2 class="title" style="font:bold;margin-top:2px;font-family:Constantia;"><u>GLANCE</u></h2>
+                <table style="margin-left:60px" >               
+                        
+                       <tr>
+                          
+                            <td class="auto-style1"><span  class="glyphicon glyphicon-home" style="margin-left:10px"></span></td>
+                                 <td class="auto-style2" > <a href="home.aspx">HOME</a></td>
+                             
+                              
+                       
+                           </tr>
+                    <tr><td class="auto-style1">&nbsp;&nbsp;</td></tr>
+                             <tr>
+                            <td class="auto-style1">
+                               <span class="glyphicon glyphicon-th-list"style="margin-left:10px"></span></td>
+                               <td class="auto-style2"><a href="#">  ABOUT US</a></td>
+                      </tr>
+                    <tr><td class="auto-style1">&nbsp;&nbsp;</td></tr>
+                             <tr>
+                                 <td class="auto-style1">
+                            <span class="glyphicon glyphicon-plus"style="margin-left:10px"></span></td>
+                                 <td class="auto-style2"><a href="category.aspx">PRODUCTS</a></td>
+                          </tr>
+                    <tr><td class="auto-style1">&nbsp;&nbsp;</td></tr>
+                    <tr><td class="auto-style1"> <span class="glyphicon glyphicon-map-marker"style="margin-left:10px"></span></td>
+                        <td class="auto-style2"><a href="ContactUs.aspx">CONTACT US</td>
+                  </tr> <%-- <li><a href="home.aspx">HOME</a></li>
+                    <li><a href="#">ABOUT US</a></li>
+                    <li><a href="ContactUs.aspx">CONTANCT US</a></li>
+                    <li><a href="products.aspx">PRODUCTS</a></li>--%>
+               
+                    </table>
+
+            </div>
+            <!--/.Second column-->
+
+             <!--First column-->
+            <div class="col-md-8 offset-md-1" style="float:left">
+                <h2 class="title" style="font:bold;margin-top:2px;font-family:Constantia" ><u>HANDICRAFT'S WORLD</u></h2>
+                <p><br />We give your creativity a reality!
+
+We provide a great assistance to our clients. Providing the best quality of the products to our customers is our main focus.
+
+Join us and get a classy vintage look for your ambiance.We never compromise on the quality and the services provided to the customers. We believe in keeping the customers happy and providing them with products at a very competent price. </p>
+            </div>
+            <!--/.First column-->
+
+
+    
+
+        </div>
+    </div>
+    <!--/.Footer Links-->
+
+    <hr/>
+
+    <!--Call to action-->
+<%--    <div class="call-to-action">--%>
+    <div>
+        <ul>
+            
+                <h5><b>Register for free</b></h5>
+            <a href="Registration.aspx" class="btn btn-danger">Sign up!</a>
+        </ul>
+    </div>
+    <!--/.Call to action-->
+
+    <hr/>
+
+    <!--Social buttons-->
+<%--    <div class="social-section">--%>
+        <div class="company-social" style="margin-left:520px">
+        <ul>
+            <li><a class="btn-floating btn-small btn-fb"><i class="fa fa-facebook"> </i></a></li>
+            <li><a class="btn-floating btn-small btn-tw"><i class="fa fa-twitter"> </i></a></li>
+            <li><a class="btn-floating btn-small btn-gplus"><i class="fa fa-google-plus"> </i></a></li>
+            <li><a class="btn-floating btn-small btn-li"><i class="fa fa-linkedin"> </i></a></li>
+            <li><a class="btn-floating btn-small btn-git"><i class="fa fa-github"> </i></a></li>
+            <li><a class="btn-floating btn-small btn-pin"><i class="fa fa-pinterest"> </i></a></li>
+            <li><a class="btn-floating btn-small btn-ins"><i class="fa fa-instagram"> </i></a></li>
+        </ul>
+    </div>
+    <!--/.Social buttons-->
+
+    <!--Copyright-->
+    <div class="footer-copyright">
+        <div class="container-fluid">
+            © 2017 Copyright: handiworld@gmail.com
+
+        </div>
+    </div>
+    <!--/.Copyright-->
+
+</footer>
+    <!--/.Footer--> 
+ 
+</form>
+
+</body>
+   
+</html>
